@@ -1,0 +1,32 @@
+{
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "extends": ["plugin:jsdoc/recommended"],
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true,
+        "node": true
+    },
+    "plugins": ["jsdoc"],
+    "ignorePatterns": ["**/store/**/*.js"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "jsdoc/require-jsdoc": [
+            "error",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": true,
+                    "ArrowFunctionExpression": true,
+                    "FunctionExpression": true
+                }
+            }
+        ]
+    }
+}

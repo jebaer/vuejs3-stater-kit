@@ -1,14 +1,14 @@
 {
     "parser": "vue-eslint-parser",
     "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 2020,
-    "sourceType": "module"
+        "parser": "babel-eslint",
+        "ecmaVersion": 2020,
+        "sourceType": "module"
     },
     "extends": [
         "plugin:vue/recommended",
         "eslint:recommended",
-        "prettier/vue",
+        "prettier",
         "plugin:prettier/recommended"
     ],
     "env": {
@@ -17,12 +17,8 @@
         "jest": true,
         "node": true
     },
-    "plugins": [
-        "prettier"
-    ],
+    "plugins": ["prettier"],
     "rules": {
-        "prettier/prettier": [
-            "error"
-        ]
+        "prettier/prettier": ["error"]
     }
 }

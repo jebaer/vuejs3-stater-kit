@@ -2,20 +2,17 @@
     <div id="app" class="bg-black-base text-white-base">
         <main
             class="flex flex-col fixed top-0 bottom-0 w-full items-center justify-center"
-        ></main>
+        >
+            <router-view></router-view>
+        </main>
     </div>
 </template>
 
 <script>
-import { ref } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
+    name: 'App',
     setup() {
-        const msg = ref('');
-        return {
-            msg,
-        };
+        return {};
     },
 };
 </script>

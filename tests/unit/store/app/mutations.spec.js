@@ -1,5 +1,5 @@
-import appStore from './../../../src/store/modules/app';
-import * as mut from './../../../src/store/modules/app/mutations';
+import appStore from 'Store/modules/app';
+import * as mut from 'Store/modules/app/mutations';
 
 describe('SET_NAME mutation in store APP', () => {
     test('should mutate name state', () => {

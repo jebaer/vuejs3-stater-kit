@@ -25,7 +25,7 @@ let router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (to.matched.some((record) => record.meta.requiresAuth)) {
         if (!VueCookies.isKey('token')) {
             next({
                 path: '/login',

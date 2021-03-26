@@ -20,5 +20,16 @@
     "plugins": ["prettier"],
     "rules": {
         "prettier/prettier": ["error"]
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/__tests__/*.js?(x)",
+                "**/tests/unit/**/*.spec.js?(x)"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 }

@@ -1,4 +1,4 @@
-import appStore from './../../../src/store/modules/app';
+import appStore from 'Store/modules/app';
 
 describe('App getters', () => {
     test('getCapitalizedName should return capitalized name', () => {

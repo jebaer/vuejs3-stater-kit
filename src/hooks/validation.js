@@ -3,7 +3,7 @@
  *
  * @returns {boolean} the name is valid statement
  */
-export default function() {
+export default function () {
     function nameValidation(name) {
         console.log(name.value);
         const validator = /^[a-z-]{2,}$/i;

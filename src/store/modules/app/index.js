@@ -1,4 +1,4 @@
-import { reactive, readonly } from 'vue';
+import { reactive } from 'vue';
 import * as _ from './mutations';
 
 // Here define some states
@@ -8,8 +8,8 @@ const state = reactive({
 
 // Here define some getters
 const getters = {
-    getName: state => state.name,
-    getCapitalizedName: state => {
+    getName: (state) => state.name,
+    getCapitalizedName: (state) => {
         const [firstLetter, ...restOfName] = state.name;
         return firstLetter.toUpperCase() + restOfName.join('').toLowerCase();
     },
@@ -42,7 +42,7 @@ const mutations = {
 };
 
 const appModule = {
-    state: readonly(state),
+    state: state,
     actions,
     mutations,
     getters,

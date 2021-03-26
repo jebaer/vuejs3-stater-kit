@@ -1,19 +1,22 @@
-import validation from '../../src/mixins/validation';
+import validation from '../../../src/hooks/validation';
 import { shallowMount } from '@vue/test-utils';
-
+import Hello from 'Components/Hello';
+import store from 'Store/';
 describe('Name validation mixin', () => {
-    const wrapper = shallowMount({
-        render() {},
+    const wrapper = shallowMount(Hello, {
+        global: {
+            provide: {
+                store,
+            },
+        },
         mixins: [validation],
         data() {
-            return {
-                name: null,
-            };
+            return { name: '' };
         },
     });
     test('should be invalid when name is to short', () => {
-        wrapper.vm.$data.name = 'x';
-        expect(wrapper.vm.nameValidation()).toBeFalsy();
+        wrapper.setData({ name: 'x' });
+        expect(wrapper.vm.nameValidation.toBeFalsy());
     });
 
     test('should be invalid when name contains numeric caracters', () => {
